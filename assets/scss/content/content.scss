@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+$font-mont: 'Montserrat',
+sans-serif;
+$font-openSan: 'Open Sans',
+sans-serif;
+$font-pafico: 'Pacifico',
+cursive;
+$color:#8262b5;
+$fontSizeTop:14px;
+$bgTop:#222222;
+$bgBtnShop:#8262b5;
+@mixin fontChange($size,
+$family) {
+    font: {
+        size: $size;
+        family: $family;
+    }
+}
+
+@mixin btnShopNow($left,
+$bot) {
+    bottom: $bot;
+    left: $left;
+    background-color: $bgBtnShop;
+    padding: 14px 16px;
+    font: {
+        size: 14px;
+        family: $font-mont;
+    }
+}
+
+@media (min-width: 576px) {
+    body {
+        background-color: lavender;
+    }
+}
+
+#menu {
+    padding: 30px;
+    .rmenu {
+        width: 100%;
+        #logo {
+            width: 130px;
+            padding-top: 13px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .parent-menu {
+            nav {
+                button.navbar-toggler {
+                    font-size: 15px;
+                }
+            }
+        }
+        .cart-group {
+            height: 50px;
+            i.wishlist {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    $font-mont: 'Montserrat', sans-serif;
+    $font-openSan: 'Open Sans', sans-serif;
+    $font-pafico: 'Pacifico', cursive;
+    $color: #8262b5;
+    $fontSizeTop: 14px;
+    $bgTop: #222222;
+    $bgBtnShop: #8262b5;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    @mixin fontChange($size,
+    $family) {
+        font: {
+            size: $size;
+            family: $family;
+        }
+    }
+    @mixin btnShopNow($left,
+    $bot) {
+        bottom: $bot;
+        left: $left;
+        background-color: $bgBtnShop;
+        padding: 14px 16px;
+        font: {
+            size: 14px;
+            family: $font-mont;
+        }
+    }
+    .header_top {
+        padding: 17px 30px;
+        line-height: 17px;
+        text-transform: capitalize;
+        background-color: $bgTop;
+        color: #525252;
+        font-size: $fontSizeTop;
+        ul {
+            li {
+                display: inline;
+                margin-right: 30px;
+                &:last-child {
+                    margin-right: 0px;
+                }
+                a {
+                    i {
+                        padding-right: 6px;
+                    }
+                }
+            }
+        }
+    }
+    #menu {
+        padding: 30px;
+        .rmenu {
+            width: 100%;
+            #logo {
+                width: 200px;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .parent-menu {
+                width: 100%;
+                ul {
+                    margin: 0 auto;
+                    font: {
+                        size: 14px;
+                        weight: bold;
+                        family: $font-mont;
+                    }
+                    li {
+                        padding-right: 42px;
+                    }
+                }
+            }
+            .cart-group {
+                text-align: right;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                i.wishlist {
+                    margin-right: 32px;
+                }
+            }
+        }
+    }
+    main {
+        #content1 {
+            .img-left {
+                position: relative;
+                >.title {
+                    position: absolute;
+                    left: 342px;
+                    top: 327px;
+                    z-index: 2;
+                    font: {
+                        size: 30px;
+                        family: $font-pafico;
+                    }
+                }
+                a.btn-img {
+                    position: absolute;
+                    z-index: 2;
+                    margin-top: 18px;
+                    color: white;
+                    text-decoration: none;
+                    @include btnShopNow(58%,
+                    10%);
+                }
+            }
+            .img-right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+                .img-left-top {
+                    margin-bottom: 30px;
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                    >div.title {
+                        position: absolute;
+                        left: 56px;
+                        top: 65px;
+                        z-index: 2;
+                        .p1 {
+                            @include fontChange(16px,
+                            $font-mont);
+                            font-weight: bold;
+                            margin-bottom: 9px;
+                        }
+                        .p2 {
+                            @include fontChange(20px,
+                            $font-mont);
+                            font-weight: bold;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+            .img-left-bot {
+                width: 100%;
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                >div.title {
+                    position: absolute;
+                    left: 43px;
+                    top: 119px;
+                    z-index: 2;
+                    .p1 {
+                        @include fontChange(16px,
+                        $font-mont);
+                        font-weight: bold;
+                        margin-bottom: 9px;
+                    }
+                    .p2 {
+                        @include fontChange(20px,
+                        $font-mont);
+                        font-weight: bold;
+                        margin-bottom: 0px;
+                    }
+                }
+                a.btn-img {
+                    position: absolute;
+                    z-index: 3;
+                    color: white;
+                    text-decoration: none;
+                    @include btnShopNow(44px,
+                    77px);
+                }
+            }
+        }
+    }
+} // Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    $font-mont: 'Montserrat', sans-serif;
+    $font-openSan: 'Open Sans', sans-serif;
+    $font-pafico: 'Pacifico', cursive;
+    $color: #8262b5;
+    $fontSizeTop: 14px;
+    $bgTop: #222222;
+    $bgBtnShop: #8262b5;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    @mixin fontChange($size,
+    $family) {
+        font: {
+            size: $size;
+            family: $family;
+        }
+    }
+    @mixin btnShopNow($left,
+    $bot) {
+        bottom: $bot;
+        left: $left;
+        background-color: $bgBtnShop;
+        padding: 14px 16px;
+        font: {
+            size: 14px;
+            family: $font-mont;
+        }
+    }
+}
